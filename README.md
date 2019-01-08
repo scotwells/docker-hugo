@@ -27,5 +27,5 @@ There is no entrypoint defined for the container, this provides flexibility as i
 to execute. For example, to build your Hugo using the extended version, use the following command.
 
 ```shell
-$ docker run --rm -v $PWD:/app --workdir=/app scotwells/hugo:0.52 hugo-extended
+$ docker run --rm -v $PWD:/app --workdir=/app scotwells/hugo:latest hugo-extended
 ```
