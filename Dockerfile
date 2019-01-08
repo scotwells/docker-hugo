@@ -1,14 +1,14 @@
 # start with a debian version for fetching the standard hugo binary
 FROM debian:9.6-slim AS fetch-standard
 # set the version of Hugo we should install, this makes it configurable from the CLI.
-ARG VERSION=0.52
+ARG VERSION=0.53
 ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
 RUN tar -zxf hugo.tar.gz
 
 # start with a debian image to fetch the extended hugo version
 FROM debian:9.6-slim AS fetch-extended
 # set the version of Hugo we should install, this makes it configurable from the CLI.
-ARG VERSION=0.52
+ARG VERSION=0.53
 ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
 RUN tar -zxf hugo.tar.gz
 
